@@ -1,22 +1,24 @@
+# /backend/app/auth/jwt.py
 import jwt
-import os
-from datetime import datetime, timedelta
+import datetime
+from flask import current_app
 
-SECRET_KEY = os.getenv('SECRET_KEY', 'mysecretkey')
-
-def encode_token(user_id):
+def create_access_token(email):
+    """Create a new JWT token for the user"""
+    expiration = datetime.datetime.utcnow() + datetime.timedelta(hours=1)
     payload = {
-        'exp': datetime.utcnow() + timedelta(days=1),
-        'iat': datetime.utcnow(),
-        'sub': user_id
+        'email': email,
+        'exp': expiration
     }
-    return jwt.encode(payload, SECRET_KEY, algorithm='HS256')
+    token = jwt.encode(payload, current_app.config['JWT_SECRET_KEY'], algorithm='HS256')
+    return token
 
 def decode_token(token):
+    """Decode JWT token to retrieve payload"""
     try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=['HS256'])
-        return payload['sub']
+        payload = jwt.decode(token, current_app.config['JWT_SECRET_KEY'], algorithms=['HS256'])
+        return payload
     except jwt.ExpiredSignatureError:
-        return 'Token expired'
+        return None  # Token has expired
     except jwt.InvalidTokenError:
-        return 'Invalid token'
+        return None  # Invalid token
