@@ -74,3 +74,4 @@ def send_location_update_email(user_email, parcel_id, new_location):
     subject, body, html_body = create_email_body(parcel_id, user_email, 'location', new_location)
     if subject:
         send_email(subject, [user_email], body, html_body)
+        
