@@ -1,0 +1,61 @@
+/* src/pages/ParcelDetails.css */
+
+/* Ensure styles are specific to ParcelDetails */
+.parcel-details-background {
+    background-image: url("https://img.freepik.com/free-photo/supply-chain-representation-with-van-top-view_23-2149853168.jpg"); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image within the container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed;
+    height: 100vh; /* Sets the height to 100% of the viewport height */
+    width: 100%; /* Sets the width to 100% of the container */
+    position: fixed; /* Fixes the position of this element */
+    top: 0; /* Aligns to the top of the viewport */
+    left: 0; /* Aligns to the left of the viewport */
+    width: 100%; /* Sets the width to 100% of the viewport */
+    overflow: hidden; /* Hides any overflow from this element */
+
+}
+
+.parcel-details-container {
+    max-width: 400px; /* Limit the width for better readability */
+    margin: 50px auto; /* Center the container */
+    padding: 5px; /* Add padding inside the container */
+    border: 1px solid black; 
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: transparent; 
+}
+
+.parcel-details-container h2 {
+    font-size: 24px; /* Size for main heading */
+    color: #041c2c; /* Dark text color */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.parcel-details-container p {
+    font-size: 16px; /* Standard text size */
+    line-height: 1.5; /* Improve line spacing for readability */
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.parcel-details-container strong {
+    color: #0f5e5e; /* Slightly lighter color for strong text */
+}
+
+.parcel-details-container h3 {
+    font-size: 20px; /* Size for subheadings (Timeline) */
+    color: #072653; 
+    margin-top: 20px; /* Space above subheading */
+}
+
+.parcel-details-container ul {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 0; /* Remove left padding */
+}
+
+.parcel-details-container li {
+    background-color: #945c13;
+    padding: 10px; /* Padding inside list items */
+    margin-bottom: 10px; /* Space between list items */
+}

@@ -1,0 +1,63 @@
+/* src/components/Login.css */
+
+.login-page {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #72bcc9;
+}
+
+.login-container {
+    max-width: 500px; /* Maximum width of the login form */
+    margin: 20px; /* Margin around the form */
+    padding: 20px; /* Padding around the form */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: white; /* White background for the form */
+}
+
+h2 {
+    text-align: center; /* Center the heading */
+    color: black; /* Primary color for heading */
+}
+
+input {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    margin: 10px 0; /* Margin between inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+input:focus {
+    border-color: #2778ae; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside button */
+    background-color: #091e2c; /* Primary button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for button */
+    font-size: 1rem; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #1f5b7e; /* Darker shade on hover */
+}
+
+.success-message {
+    color: rgb(64, 158, 111); /* Green text for success message */
+    margin-top: 10px; /* Space above the message */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: center; /* Center the success message */
+    padding: 15px; /* Padding inside the box */
+    border: 2px solid rgb(71, 145, 145); /* Border around the box */
+    border-radius: 5px; /* Rounded corners for the box */
+    background-color: #e6ffe6; /* Light green background for contrast */;
+}

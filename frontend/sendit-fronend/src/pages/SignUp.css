@@ -1,0 +1,93 @@
+/* SignUp.css */
+
+/* Base styling for the signup page */
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height of the viewport */
+    background-color:  #72bcc9; /* Light background color */
+    padding: 20px;
+}
+
+.signup-container {
+    background-color: white; /* White background for form container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 40px; /* Padding inside the container */
+    width: 100%;
+    max-width: 400px; /* Maximum width for better readability */
+}
+
+h2 {
+    text-align: center; /* Centered heading */
+    color: black; /* Darker text color for contrast */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+input {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners for inputs */
+}
+
+input[type="checkbox"] {
+    width: auto; /* Default checkbox size */
+}
+
+.terms-container {
+    display: flex;
+    align-items: center; /* Align checkbox and label vertically */
+}
+
+label {
+    margin-left: 8px; /* Space between checkbox and label */
+}
+
+button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside button */
+    background-color: #081c29; /* Button color */
+    color: white; /* Text color for button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #218496; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.error-message-box, .success-message-box {
+    margin-bottom: 15px; /* Space below messages */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.error-message-box {
+    color: rgb(64, 158, 111); /* Green text for success message */
+    margin-top: 1px; /* Space above the message */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: center; /* Center the success message */
+    padding: 1px; /* Padding inside the box */
+    border: 1px solid rgb(71, 145, 145); /* Border around the box */
+    border-radius: 8px; /* Rounded corners for the box */
+    background-color: #e6ffe6; /* Light green background for contrast */;
+
+}
+
+.success-message-box {
+    color: rgb(64, 158, 111); /* Green text for success message */
+    margin-top: 1px; /* Space above the message */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: center; /* Center the success message */
+    padding: 1px; /* Padding inside the box */
+    border: 1px solid rgb(71, 145, 145); /* Border around the box */
+    border-radius: 8px; /* Rounded corners for the box */
+    background-color: #e6ffe6; /* Light green background for contrast */;
+
+}
