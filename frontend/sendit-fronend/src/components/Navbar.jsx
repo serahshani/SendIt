@@ -32,6 +32,9 @@ const Navbar = () => {
                 <li>
                     <Link to="/about">About </Link> {/* Example link */}
                 </li>
+
+
+
             </ul>
         </nav>
     );
