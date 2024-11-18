@@ -1,0 +1,62 @@
+/* Base body styling */
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    background-color: #f5f5f5; /* Default background color for the rest of the pages */
+}
+
+/* Home Page Specific Styling */
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it covers the full height of the viewport */
+    background-image: url("https://img.freepik.com/premium-vector/delivery-man-standing-holding-parcel-box-front-smartphone-screen-parcel-boxes-floating-around-online-shopping-delivery-concept-vector-character-3d-isolated-orange-background_425581-11.jpg?w=740"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; /* Ensure the background doesn't repeat */
+    width: 100%; /* Make sure it takes the full width of the viewport */
+    padding: 20px; /* Optional padding to give space around the content */
+    position: relative; /* Positioning context for overlay */
+}
+
+.content {
+    position: relative; /* Position content relative to overlay */
+    text-align: center; /* Center text for better visibility */
+    color: white; /* Change text color for better visibility */
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+    margin-top: 50px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 30px auto;
+    max-width: 700px; /* Retain styling for any remaining paragraphs if needed */
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 2px;
+    background-color: #2778ae;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #218496;
+    transform: translateY(-2px); /* Slight lift effect */
+}
