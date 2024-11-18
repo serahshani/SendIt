@@ -150,10 +150,11 @@ const SignUp = () => {
                         <p>{successMessage}</p>
                     </div>
                 )}
+<p className="login-prompt">
+    Already have an account? <Link to="/login" className="signup-link">Log in here</Link>
+</p>
 
-                <p>
-                    Already have an account? <Link to="/login">Log in here</Link>
-                </p>
+
             </div>
         </div>
     );

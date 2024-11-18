@@ -1,6 +1,7 @@
 // src/components/Login.jsx
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import './Login.css'; 
 
 const Login = () => {
@@ -44,6 +45,12 @@ const Login = () => {
                     <button type="submit">Log In</button>
                 </form>
                 {successMessage && <p className="success-message">{successMessage}</p>} {/* Display success message */}
+                
+                {/* Signup Link */}
+                <p>
+                    Don't have an account? 
+                    <Link to="/signup" className="signup-link"> Sign Up</Link>
+                </p>
             </div>
         </div>
     );

@@ -5,17 +5,18 @@
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 100vh; /* Full viewport height */
-    background-color: #72bcc9;
+    background-image: url("https://img.freepik.com/free-vector/geometric-striped-background-with-halftone-border_1409-1446.jpg?semt=ais_hybrid"); /* Background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-color: #72bcc9; /* Fallback color if image fails to load */
 }
-
 .login-container {
-    max-width: 500px; /* Maximum width of the login form */
-    margin: 20px; /* Margin around the form */
+    max-width: 400px; /* Maximum width of the login form */
+    margin: 10px; /* Margin around the form */
     padding: 20px; /* Padding around the form */
-    border: 1px solid #ddd; /* Light gray border */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    background-color: white; /* White background for the form */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Black shadow for depth */
+    
 }
 
 h2 {
@@ -24,10 +25,10 @@ h2 {
 }
 
 input {
-    width: 100%; /* Full width inputs */
-    padding: 10px; /* Padding inside inputs */
-    margin: 10px 0; /* Margin between inputs */
-    border: 1px solid #ccc; /* Light gray border */
+    width: 80%; /* Set width to less than 100% (e.g., 80%) */
+    padding: 10px; /* Increased padding for better spacing */
+    margin: 10px auto; /* Center horizontally with auto margins */
+    border: 1px solid white; 
     border-radius: 5px; /* Rounded corners for inputs */
 }
 
@@ -52,12 +53,23 @@ button:hover {
 }
 
 .success-message {
-    color: rgb(64, 158, 111); /* Green text for success message */
+    color: black; 
     margin-top: 10px; /* Space above the message */
     font-weight: bold; /* Bold text for emphasis */
     text-align: center; /* Center the success message */
     padding: 15px; /* Padding inside the box */
-    border: 2px solid rgb(71, 145, 145); /* Border around the box */
+    border: 2px solid rgb(6, 22, 22); /* Border around the box */
     border-radius: 5px; /* Rounded corners for the box */
-    background-color: #e6ffe6; /* Light green background for contrast */;
+    background-color: transparent; 
+}
+.signup-link {
+    color: #143849; 
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.signup-link:hover {
+    color: #030c16; /* Darker shade on hover */
+    text-decoration: underline; /* Underline on hover for emphasis */
 }

@@ -6,12 +6,14 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Full height of the viewport */
-    background-color:  #72bcc9; /* Light background color */
+    background-image: url("https://img.freepik.com/free-vector/geometric-striped-background-with-halftone-border_1409-1446.jpg?semt=ais_hybrid"); /* Background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
     padding: 20px;
 }
 
 .signup-container {
-    background-color: white; /* White background for form container */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for better readability */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     padding: 40px; /* Padding inside the container */
@@ -33,17 +35,24 @@ input {
     border-radius: 4px; /* Rounded corners for inputs */
 }
 
+/* Style for checkbox inputs */
 input[type="checkbox"] {
-    width: auto; /* Default checkbox size */
+    width: 20px; /* Set a fixed width for the checkbox */
+    height: 20px; /* Set a fixed height for the checkbox */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    accent-color: #091d33; /* Change the color of the checkbox (modern browsers) */
+}
+
+/* Style the label associated with the checkbox */
+label {
+    font-size: 16px; /* Set font size for the label */
+    margin-left: 8px; /* Space between checkbox and label */
+    color: #333; /* Color of the label text */
 }
 
 .terms-container {
     display: flex;
     align-items: center; /* Align checkbox and label vertically */
-}
-
-label {
-    margin-left: 8px; /* Space between checkbox and label */
 }
 
 button {
@@ -62,32 +71,37 @@ button:hover {
     transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
-.error-message-box, .success-message-box {
+.error-message-box {
     margin-bottom: 15px; /* Space below messages */
     padding: 10px;
     border-radius: 4px;
-}
-
-.error-message-box {
-    color: rgb(64, 158, 111); /* Green text for success message */
-    margin-top: 1px; /* Space above the message */
-    font-weight: bold; /* Bold text for emphasis */
-    text-align: center; /* Center the success message */
-    padding: 1px; /* Padding inside the box */
-    border: 1px solid rgb(71, 145, 145); /* Border around the box */
-    border-radius: 8px; /* Rounded corners for the box */
-    background-color: #e6ffe6; /* Light green background for contrast */;
-
+    color: #721c24; /* Dark red text color for error message */
+    background-color: #f8d7da; /* Light red background for error message */
 }
 
 .success-message-box {
-    color: rgb(64, 158, 111); /* Green text for success message */
-    margin-top: 1px; /* Space above the message */
-    font-weight: bold; /* Bold text for emphasis */
-    text-align: center; /* Center the success message */
-    padding: 1px; /* Padding inside the box */
-    border: 1px solid rgb(71, 145, 145); /* Border around the box */
-    border-radius: 8px; /* Rounded corners for the box */
-    background-color: #e6ffe6; /* Light green background for contrast */;
+    margin-bottom: 15px; /* Space below messages */
+    padding: 10px;
+    border: 2px solid rgb(6, 22, 22); /* Border around the box */
+    color: #20a740; 
+}
 
+.login-prompt {
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Space above the prompt */
+    font-size: 16px; /* Font size for the prompt */
+    color: #333; /* Dark color for contrast */
+}
+
+/* Style for the link */
+.login-prompt .signup-link {
+    color:   #143849; /* Primary color for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the link bold */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.login-prompt .signup-link:hover {
+    color: #030c16; /* Darker shade on hover */
+    text-decoration: underline; /* Underline on hover for emphasis */
 }
