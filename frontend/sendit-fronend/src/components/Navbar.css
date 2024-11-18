@@ -11,11 +11,15 @@
     align-items: center; /* Center items vertically */
     width: 100%; /* Makes it full width */
     z-index: 1000; /* Ensures it stays on top of other elements */
+    margin-left: -5px;
+    margin-right: 5px;
 }
 
 /* Styling for the brand link */
 .navbar-brand {
     font-size: 1.8em; /* Larger font for brand */
+    margin-left: 20px;
+
 }
 
 /* Link styling specifically for the brand link */
@@ -30,6 +34,7 @@
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
     display: flex; /* Flexbox for horizontal layout */
+    gap: 0.5rem;
 }
 
 /* Individual link items in the navbar */

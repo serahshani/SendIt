@@ -30,6 +30,7 @@ input {
     margin: 10px auto; /* Center horizontally with auto margins */
     border: 1px solid white; 
     border-radius: 5px; /* Rounded corners for inputs */
+    margin-left: -10px;
 }
 
 input:focus {

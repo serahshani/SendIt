@@ -19,6 +19,7 @@
     padding: 40px; /* Padding inside the container */
     width: 100%;
     max-width: 400px; /* Maximum width for better readability */
+    margin-top: 50px;
 }
 
 h2 {
