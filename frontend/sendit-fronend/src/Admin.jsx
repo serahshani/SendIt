@@ -4,7 +4,7 @@ import {sendEmailNotification} from './emailService';
 import 'tailwind/tailwind.css';
 
 
-const AdminPage = ()=> {
+const Admin = ()=> {
     const [parcelId, setParcelId] = useState('')
 const [status, setStatus] = useState('')
 const [pickupLocation, setPickupLocation] = useState({}) 
@@ -51,7 +51,7 @@ return(
 );
 };
 
-export default AdminPage;
+export default Admin;
         
 
         

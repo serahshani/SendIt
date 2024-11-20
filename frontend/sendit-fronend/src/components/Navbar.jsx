@@ -1,8 +1,7 @@
-// src/components/Navbar.jsx
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Importing the CSS file for styling
+import './Navbar.css';
+import { FaHome, FaShoppingCart, FaSignInAlt, FaInfoCircle, FaUserShield, FaBox } from 'react-icons/fa';
 
 const Navbar = () => {
     return (
@@ -12,26 +11,36 @@ const Navbar = () => {
             </div>
             <ul className="navbar-links">
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/homePage">
+                        <FaHome className="navbar-icon" /> Home
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/login">Login</Link>
+                    <Link to="/login">
+                        <FaSignInAlt className="navbar-icon" /> Login
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/order/1">Parcel Details</Link> {/* Example link */}
+                    <Link to="/order/1">
+                        <FaBox className="navbar-icon" /> Parcel Details
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/order">Create Order</Link> {/* Example link */}
+                    <Link to="/admin">
+                        <FaUserShield className="navbar-icon" /> Admin Dashboard
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/admin">Admin Dashboard</Link> {/* Example link */}
+                    <Link to="/about">
+                        <FaInfoCircle className="navbar-icon" /> About
+                    </Link>
                 </li>
-                <li>
-                    <Link to="/about">About </Link> {/* Example link */}
+                <li className="navbar-cart">
+                    <Link to="/cart">
+                        <FaShoppingCart className="navbar-icon" /> Cart
+                    </Link>
                 </li>
-
-
-
+                <li className="change-address">Change Address</li>
             </ul>
         </nav>
     );
