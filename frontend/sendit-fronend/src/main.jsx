@@ -12,6 +12,8 @@ import AdminDashboard from './Admin.jsx';
 import Cart from './components/Cart.jsx';
 import CreateOrder from './components/CreateOrder.jsx';
 import PaymentPage from './components/Paymentpage.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 
 createRoot(document.getElementById('root')).render(
