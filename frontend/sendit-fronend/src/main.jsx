@@ -8,10 +8,17 @@ import ParcelDetails from './pages/ParcelDetails.jsx';
 import SignUp from './pages/SignUp.jsx';
 import About from './pages/About.jsx';
 import HomePage from './pages/HomePage.jsx';
+import AdminDashboard from './Admin.jsx';
 import Cart from './components/Cart.jsx';
 import CreateOrder from './components/CreateOrder.jsx';
 import PaymentPage from './components/Paymentpage.jsx';
+<<<<<<< HEAD
 import ParcelTracking from './components/ParcelTracking.jsx';
+=======
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+
+>>>>>>> cc644b96035f07537822191518d4773e6a022d75
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -26,6 +33,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="signup" element={<SignUp />} />
           <Route path="about" element={<About />} />
           <Route path="homePage" element={<HomePage />} />
+          <Route path="admin" element={<AdminDashboard />} />
           <Route path="cart" element={<Cart />} />
           <Route path="create-order" element={<CreateOrder />} />
           <Route path="payment-page" element={<PaymentPage />} />
