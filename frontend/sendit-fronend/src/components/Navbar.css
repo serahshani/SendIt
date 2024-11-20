@@ -1,0 +1,147 @@
+/* Navbar.css */
+.navbar {
+    background: linear-gradient(to right, #ff9102, #dddedf);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar-brand a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand a:hover {
+    color: #f1c40f;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    position: relative;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+/* Underline animation for links */
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f1c40f;
+    transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+.navbar-links a:hover {
+    color: #352c0b;
+    transform: translateY(-2px);
+}
+
+.change-address {
+    
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.change-address:hover {
+   
+    transform: scale(1.05);
+    animation: none;
+}
+
+/* Pulse animation for the button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .navbar-brand {
+        margin-bottom: 1rem;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .change-address {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+/* Add slide-in animation when navbar first loads */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar {
+    animation: slideIn 0.5s ease-out;
+}
