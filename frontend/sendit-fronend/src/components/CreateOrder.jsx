@@ -4,13 +4,14 @@ import "./CreateOrder.css";
 
 const CreateOrder = () => {
   const [formData, setFormData] = useState({
+    sender: "",
     recipient: "",
     pickupLocation: "",
     destination: "",
     weight: "",
   });
   const [message, setMessage] = useState("");
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,7 +37,7 @@ const CreateOrder = () => {
       setMessage("Order created successfully!");
       console.log("Order Details:", data);
 
-     
+      // Redirect to Payment page
       navigate("/Payment-page");
     } catch (err) {
       setMessage("Error creating order. Please try again.");
@@ -44,44 +45,56 @@ const CreateOrder = () => {
   };
 
   return (
-    <div className="create-order">
-      <h1>Create a New Order</h1>
-      {message && <p className="message">{message}</p>}
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="recipient"
-          placeholder="Recipient Name"
-          value={formData.recipient}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="pickupLocation"
-          placeholder="Pickup Location"
-          value={formData.pickupLocation}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="destination"
-          placeholder="Destination"
-          value={formData.destination}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="number"
-          name="weight"
-          placeholder="Weight (kg)"
-          value={formData.weight}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Submit Order</button>
-      </form>
+    <div className="create-order-container">
+      <div className="create-order-card">
+        <h2>Create Order</h2>
+        {message && <p className="message">{message}</p>}
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="sender"
+            placeholder="Sender Name"
+            value={formData.sender}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="recipient"
+            placeholder="Recipient Name"
+            value={formData.recipient}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="pickupLocation"
+            placeholder="Pickup Address"
+            value={formData.pickupLocation}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="destination"
+            placeholder="Delivery Address"
+            value={formData.destination}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="number"
+            name="weight"
+            placeholder="Package Weight (kg)"
+            value={formData.weight}
+            onChange={handleChange}
+            required
+          />
+          <button className="create-order-button" type="submit">
+            Place Order
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

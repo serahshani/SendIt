@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage.jsx';
 import Cart from './components/Cart.jsx';
 import CreateOrder from './components/CreateOrder.jsx';
 import PaymentPage from './components/Paymentpage.jsx';
+import ParcelTracking from './components/ParcelTracking.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="cart" element={<Cart />} />
           <Route path="create-order" element={<CreateOrder />} />
           <Route path="payment-page" element={<PaymentPage />} />
+          <Route path="parcel-Tracking" element={<ParcelTracking />} />
         </Route>
       </Routes>
     </BrowserRouter>
