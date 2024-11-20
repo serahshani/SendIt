@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from app.models import User, Parcel, db
 from app.email_utils import send_email
+from app import db
 
 main = Blueprint('main', __name__)
 

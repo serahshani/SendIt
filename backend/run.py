@@ -1,23 +1,11 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from flask_mail import Mail
-from app.config import Config
+from app import create_app, db  # Import create_app function and db instance
 
-db = SQLAlchemy()
-migrate = Migrate()
-mail = Mail()
+app = create_app()
 
-def create_app():
-    app = Flask(__name__)
-    app.config.from_object(Config)
+# Optional: Add a context processor to make the db instance available globally
+@app.shell_context_processor
+def make_shell_context():
+    return {'db': db}
 
-    db.init_app(app)
-    migrate.init_app(app, db)
-    mail.init_app(app)
-
-    from app.routes import main
-    app.register_blueprint(main)
-
-    return app
-
+if __name__ == '__main__':
+    app.run()

@@ -2,9 +2,7 @@ import os
 
 class Config:
     SECRET_KEY = os.getenv("SECRET_KEY", "default_secret_key")
-    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://username:password@localhost:5432/database_name"
-
-
+    SQLALCHEMY_DATABASE_URI = "postgresql://senditdb_user:aSVP1ddzdLG31AxhVYVZ8tX0xfDBWBHE@dpg-csuqmvl6l47c7380uf30-a.oregon-postgres.render.com/senditdb"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     MAIL_SERVER = os.getenv("MAIL_SERVER", "smtp.gmail.com")
